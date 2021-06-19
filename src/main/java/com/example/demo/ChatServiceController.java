@@ -14,6 +14,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 @RestController
@@ -97,8 +98,8 @@ public class ChatServiceController {
 	
 	@CrossOrigin(origins = VALID_CUSTOMER)
 	@GetMapping("/GetConversations/{username}")
-	public List<UserConversationBean> getConversations(@PathVariable String username){
-		List<UserConversationBean> lstReturn= proxy.getConversations(username);
+	public List getConversations(@PathVariable String username){
+		List lstReturn= proxy.getConversations(username);
 		System.err.println("lstReturn:"+lstReturn);
 		
 		

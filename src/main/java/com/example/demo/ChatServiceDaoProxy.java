@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.cloud.openfeign.FeignClient;
@@ -21,6 +22,6 @@ public interface ChatServiceDaoProxy {
 	public List<MessageBean> getConversation(@PathVariable String idconversation);
 	
 	@GetMapping("/GetConversationsDAO/{username}")
-	public List<UserConversationBean> getConversations(@PathVariable String username);
+	public List getConversations(@PathVariable String username);
 
 }
